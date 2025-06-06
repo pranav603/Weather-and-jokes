@@ -1,0 +1,165 @@
+  body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+}
+
+    header {
+      background: #0e2fd1;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+   
+     .container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #0f318e);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #010106;
+      text-align: center;
+      
+    }
+
+    .question {
+      display: none;
+      margin-bottom: 15px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f8f9fa;
+    }
+
+    .question.active {
+      display: block;
+    }
+
+    .question p {
+      margin: 0 0 10px 0;
+    }
+
+    .btn {
+      background: #385495;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px 5px 0 0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #7c91c9;
+    }
+
+    .nav-buttons {
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .api-buttons {
+      margin-bottom: 15px;
+    }
+
+    #api-result {
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .weather-box {
+      display: none;
+      background: #e9f5ee;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .weather-box input {
+      padding: 8px;
+      margin-right: 10px;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+    }
+    .question {
+  display: none;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.question.active {
+  display: block;
+}
+
+.question p {
+  margin: 0 0 10px 0;
+}
+
+.question .btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 5px 0;
+  background: #385495;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.question .btn:hover {
+  background: #7c91c9;
+}
+.question .btn
+/* .api-buttons .btn,
+.weather-box .btn, */
+/* .nav-buttons .btn
+{ */{
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  margin: 10px auto;
+  text-align: center;
+}
+.api-buttons,
+.nav-buttons,
+.weather-box {
+  text-align: center;
+}
+
+
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }

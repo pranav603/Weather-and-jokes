@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>interactive quiz with multiple questions</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+ 
+<body>
+  <header>Quiz weather and jokes</header>
+
+  <div class="container">
+
+    <!-- Quiz Section -->
+    <div class="section">
+      <h2>📚 Quick Quiz</h2>
+
+      <div class="question active" data-answer="b">
+        <p>1. Who is the current Prime Minister of the United Kingdom?</p>
+        <button class="btn" onclick="checkAnswer(this, 'a')">A. Boris Johnson</button>
+        <button class="btn" onclick="checkAnswer(this, 'b')">B. Rishi Sunak</button>
+        <button class="btn" onclick="checkAnswer(this, 'c')">C. Keir Starmer</button>
+        <p class="result"></p>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>Who was the first person to walk on the Moon?</p>
+        <button class="btn" onclick="checkAnswer(this, 'a')">A. Yuri Gagarin </button>
+        <button class="btn" onclick="checkAnswer(this, 'b')">B. Buzz Aldrin </button>
+        <button class="btn" onclick="checkAnswer(this, 'c')">C. Neil Armstrong </button>
+        <p class="result"></p>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>3.What does "URL" stand for?</p>
+        <button class="btn" onclick="checkAnswer(this, 'a')">A. Uniform Resource Locator</button>
+        <button class="btn" onclick="checkAnswer(this, 'b')">B. Universal Reset Line</button>
+        <button class="btn" onclick="checkAnswer(this, 'c')">C.Unique Resource List</button>
+        <p class="result"></p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn" onclick="navigateQuestion(-1)">Previous</button>
+        <button class="btn" onclick="navigateQuestion(1)">Next</button>
+      </div>
+    </div>
+
+    <!-- API Section -->
+    <div class="section">
+      <h2>&#9925; Weather &#128514; Joke</h2>
+      <div class="api-buttons">
+        <button class="btn" onclick="fetchJoke()">Get a Joke</button>
+        <button class="btn" onclick="showWeatherBox()">Get Weather</button>
+      </div>
+      <div class="weather-box" id="weather-box">
+        <input type="text" id="city-input" placeholder="Enter city ">
+        <button class="btn" onclick="fetchWeather()">Check</button>
+      </div>
+      <p id="api-result"></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
