@@ -1,68 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>interactive quiz with multiple questions</title>
-    <link rel="stylesheet" href="Style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Weather App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
- 
 <body>
-  <header>Quiz weather and jokes</header>
+  <h1>🌤 Weather Forecast</h1>
 
-  <div class="container">
-
-    <!-- Quiz Section -->
-    <div class="section">
-      <h2>📚 Quick Quiz</h2>
-
-      <div class="question active" data-answer="b">
-        <p>1. Who is the current Prime Minister of the United Kingdom?</p>
-        <button class="btn" onclick="checkAnswer(this, 'a')">A. Boris Johnson</button>
-        <button class="btn" onclick="checkAnswer(this, 'b')">B. Rishi Sunak</button>
-        <button class="btn" onclick="checkAnswer(this, 'c')">C. Keir Starmer</button>
-        <p class="result"></p>
-      </div>
-
-      <div class="question" data-answer="c">
-        <p>Who was the first person to walk on the Moon?</p>
-        <button class="btn" onclick="checkAnswer(this, 'a')">A. Yuri Gagarin </button>
-        <button class="btn" onclick="checkAnswer(this, 'b')">B. Buzz Aldrin </button>
-        <button class="btn" onclick="checkAnswer(this, 'c')">C. Neil Armstrong </button>
-        <p class="result"></p>
-      </div>
-
-      <div class="question" data-answer="a">
-        <p>3.What does "URL" stand for?</p>
-        <button class="btn" onclick="checkAnswer(this, 'a')">A. Uniform Resource Locator</button>
-        <button class="btn" onclick="checkAnswer(this, 'b')">B. Universal Reset Line</button>
-        <button class="btn" onclick="checkAnswer(this, 'c')">C.Unique Resource List</button>
-        <p class="result"></p>
-      </div>
-
-      <div class="nav-buttons">
-        <button class="btn" onclick="navigateQuestion(-1)">Previous</button>
-        <button class="btn" onclick="navigateQuestion(1)">Next</button>
-      </div>
-    </div>
-
-    <!-- API Section -->
-    <div class="section">
-      <h2>&#9925; Weather &#128514; Joke</h2>
-      <div class="api-buttons">
-        <button class="btn" onclick="fetchJoke()">Get a Joke</button>
-        <button class="btn" onclick="showWeatherBox()">Get Weather</button>
-      </div>
-      <div class="weather-box" id="weather-box">
-        <input type="text" id="city-input" placeholder="Enter city ">
-        <button class="btn" onclick="fetchWeather()">Check</button>
-      </div>
-      <p id="api-result"></p>
-    </div>
-
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Enter city name..." />
+    <button id="searchBtn">Search</button>
   </div>
 
+  <div class="loader" id="loader"></div>
+
+  <div class="container weather" id="weather">
+    <h2 id="location">Enter a city</h2>
+    <img src="" class="weather-icon" id="icon" />
+    <div class="temp" id="temp"></div>
+    <div class="desc" id="desc"></div>
+    <div class="details">
+      <div><p>💧 Humidity</p><p id="humidity"></p></div>
+      <div><p>💨 Wind</p><p id="wind"></p></div>
+      <div><p>🌡️ Feels Like</p><p id="feels"></p></div>
+    </div>
+
+    <div class="forecast-section">
+      <h3>Next 24 Hours</h3>
+      <div class="hourly" id="hourly"></div>
+
+      <h3>Next 3 Days</h3>
+      <div class="daily" id="daily"></div>
+    </div>
+  </div>
   <script src="script.js"></script>
 
+  
 </body>
-</html>
+</html>    
