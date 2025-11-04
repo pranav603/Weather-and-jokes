@@ -1,165 +1,154 @@
-  body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #a8edea, #fed6e3);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #333;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-    header {
-      background: #0e2fd1;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
-   
-     .container {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  background: linear-gradient(to bottom right, #ffffff, #0f318e);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #010106;
-      text-align: center;
-      
-    }
-
-    .question {
-      display: none;
-      margin-bottom: 15px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #f8f9fa;
-    }
-
-    .question.active {
-      display: block;
-    }
-
-    .question p {
-      margin: 0 0 10px 0;
-    }
-
-    .btn {
-      background: #385495;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 5px 5px 0 0;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background: #7c91c9;
-    }
-
-    .nav-buttons {
-      margin-top: 10px;
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      overflow-x: hidden;
+      transition: background 1s ease-in-out;
     }
 
-    .result {
-      margin-top: 10px;
-      font-weight: bold;
+    .container {
+      width: 90%;
+      max-width: 480px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
     }
 
-    .api-buttons {
-      margin-bottom: 15px;
+    .search-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 10px;
+      border-radius: 15px;
     }
 
-    #api-result {
-      margin-top: 10px;
-      font-style: italic;
+    .search-box input {
+      width: 70%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
     }
 
-    .weather-box {
+    .search-box button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: #3b82f6;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .search-box button:hover {
+      background: #2563eb;
+    }
+
+    .loader {
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-top: 5px solid #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
       display: none;
-      background: #e9f5ee;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-top: 10px;
     }
 
-    .weather-box input {
-      padding: 8px;
-      margin-right: 10px;
-      border-radius: 6px;
-      border: 1px solid #aaa;
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
-    .question {
-  display: none;
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f8f9fa;
-}
 
-.question.active {
-  display: block;
-}
+    .weather {
+      display: none;
+      animation: fadeIn 1s ease forwards;
+    }
 
-.question p {
-  margin: 0 0 10px 0;
-}
+    .weather-icon {
+      width: 120px;
+      margin: 10px auto;
+    }
 
-.question .btn {
-  display: block;
-  width: 100%;
-  text-align: left;
-  margin: 5px 0;
-  background: #385495;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+    .temp {
+      font-size: 3rem;
+      font-weight: 600;
+    }
 
-.question .btn:hover {
-  background: #7c91c9;
-}
-.question .btn
-/* .api-buttons .btn,
-.weather-box .btn, */
-/* .nav-buttons .btn
-{ */{
-  display: block;
-  width: 80%;
-  max-width: 300px;
-  margin: 10px auto;
-  text-align: center;
-}
-.api-buttons,
-.nav-buttons,
-.weather-box {
-  text-align: center;
-}
+    .desc {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
 
+    .details {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px 0;
+    }
 
+    .details div {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 10px;
+      width: 30%;
+    }
 
-    @media (max-width: 600px) {
-      .btn {
-        width: 100%;
-        margin-bottom: 8px;
-      }
+    .forecast-section {
+      margin-top: 20px;
+    }
+
+    .hourly, .daily {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .card {
+      min-width: 100px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 10px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 50px;
+    }
+
+    .card h4 {
+      font-size: 0.9rem;
+      margin: 5px 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
