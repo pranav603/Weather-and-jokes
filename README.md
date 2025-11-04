@@ -17,7 +17,7 @@ A simple and fun web application that displays **real-time weather information**
 ## 🛠️ Tech Stack
 
 - **HTML5** – Structure of the app  
-- **CSS3** – Styling and layout  
+- **CSS** – Styling and layout  
 - **JavaScript (Fetch API)** – For fetching weather and jokes dynamically  
 - **OpenWeather API** – For weather data  
 - **Joke API** – For random jokes  
@@ -29,3 +29,24 @@ A simple and fun web application that displays **real-time weather information**
 1. Clone this repository  
    ```bash
    git clone https://github.com/pranav603/Weather-and-jokes.git
+
+2. Open index.html in your browser
+3. Type a city name and enjoy your daily weather + a joke! 😁
+
+📸 Preview
+
+
+
+💡 Future Improvements
+
+Add more weather details (like 5-day forecast)
+
+Add light/dark mode
+
+Improve joke categories or add memes 😅
+
+👨‍💻 Author
+
+Pranav Raj
+🌐 GitHub
+ • ✉️ Email
